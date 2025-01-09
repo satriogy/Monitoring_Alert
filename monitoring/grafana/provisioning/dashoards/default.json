@@ -1,0 +1,29 @@
+{
+  "dashboard": {
+    "id": null,
+    "uid": "prometheus-dashboard",
+    "title": "Prometheus Overview",
+    "tags": ["prometheus", "overview"],
+    "time": {
+      "from": "now-6h",
+      "to": "now"
+    },
+    "timezone": "browser",
+    "schemaVersion": 16,
+    "version": 1,
+    "panels": [
+      {
+        "type": "graph",
+        "title": "CPU Usage",
+        "targets": [
+          {
+            "expr": "rate(node_cpu_seconds_total[1m])",
+            "legendFormat": "{{cpu}}",
+            "refId": "A"
+          }
+        ]
+      }
+    ]
+  },
+  "overwrite": true
+}
